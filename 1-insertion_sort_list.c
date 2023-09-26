@@ -15,13 +15,13 @@ void insertion_sort_list(listint_t **list)
 	temp = 0;
 	while (*list != NULL)
 	{
-		if (*list->next->n > *list->n)
+		if ((*list)->next->n > (*list)->n)
 		{
-			temp = *list->n;
-			*list->n = *list->next->n;
-			*list->next->n = temp;
+			temp = (*list)->next;
+			(*list)->next = (*list)->next->next;
+			(*list)->next->next = temp;
 		}
-		*list = *list->next;
+		(*list) = (*list)->next;
 		print_list(*list);
 	}
 }
