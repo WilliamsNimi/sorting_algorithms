@@ -10,9 +10,9 @@
  */
 void insertion_sort_list(listint_t **list)
 {
-	int temp;
+	listint_t *temp;
 
-	temp = 0;
+	temp = malloc(sizeof(listint_s));
 	while (*list != NULL)
 	{
 		if ((*list)->next->n > (*list)->n)
