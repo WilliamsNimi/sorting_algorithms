@@ -12,7 +12,7 @@ void insertion_sort_list(listint_t **list)
 {
 	listint_t *temp;
 
-	temp = malloc(sizeof(listint_s));
+	temp = malloc(sizeof(listint_t));
 	while (*list != NULL)
 	{
 		if ((*list)->next->n > (*list)->n)
